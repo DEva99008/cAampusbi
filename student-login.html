@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#092440">
+<title>Student sign in | CampusBite KPRCAS</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="auth-refresh.css">
+<link rel="stylesheet" href="campus-experience.css">
+</head>
+<body class="student-page">
+<header class="top student-top">
+  <a class="brand" href="index.html"><img src="campusbite-logo.png" alt="CampusBite logo"><span>Campus<span class="orange">Bite</span></span></a>
+  <nav class="student-role-links" aria-label="Sign-in options">
+    <a class="nav" href="index.html">← Sign-in choices</a>
+    <a class="nav admin-login-link" href="admin.html">Admin login →</a>
+  </nav>
+</header>
+<main class="student-auth-layout">
+  <section class="student-auth-story">
+    <span class="pill">KPRCAS STUDENT ACCESS</span>
+    <h1>Your campus<br><span class="orange">break starts here.</span></h1>
+    <p>Sign in to track canteen orders, check student rewards and find pickup points around campus.</p>
+    <div class="student-feature-pills"><span>⌖ KPRCAS pickup</span><span>◷ Order status</span><span>✦ Student rewards</span></div>
+  </section>
+  <section class="panel student-auth-card">
+    <p class="eyebrow">STUDENT PORTAL</p>
+    <h2>Student sign in</h2>
+    <p class="muted-copy">This student sign-in page is separate from the staff admin console.</p>
+    <div class="login-mode-switch" role="group" aria-label="Choose student sign-in method">
+      <button id="studentIdMode" class="login-mode active" type="button" aria-pressed="true">Student ID</button>
+      <button id="studentPhoneMode" class="login-mode" type="button" aria-pressed="false">Mobile demo</button>
+    </div>
+    <form id="studentLoginForm">
+      <label><span id="loginIdentityLabel">Student ID</span><input id="studentId" name="studentId" autocomplete="username" required placeholder="Enter your student ID"></label>
+      <label><span id="loginSecretLabel">Campus PIN</span><input id="studentPin" name="studentPin" type="password" inputmode="numeric" autocomplete="current-password" required placeholder="Enter your campus PIN"></label>
+      <p id="loginModeHelp" class="login-mode-help">Use your student ID and campus PIN to sign in.</p>
+      <button class="primary full" type="submit"><span id="loginSubmitLabel">Sign in to student portal</span></button>
+      <p id="studentLoginError" class="error" role="alert"></p>
+    </form>
+    <div class="demo-access"><b>Local demo access only</b><span>Student ID: cb1024 · PIN: 1234</span><span>Sample mobile: 9000001024 · Demo code: 1234</span><small>No SMS is sent. A phone number can sign in to the demo account but cannot reveal or retrieve a saved password. Never enter a real password or private phone number.</small></div>
+    <a class="student-back-link" href="shop.html">Browse the campus menu →</a>
+  </section>
+</main>
+<footer><img src="campusbite-logo.png" alt=""><span>CampusBite · KPRCAS campus food</span><small>Local demo app · student data is stored in this browser.</small></footer>
+<script src="student-auth.js"></script>
+<script src="campus-experience.js"></script>
+</body>
+</html>

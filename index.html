@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#092440">
+<title>Welcome to CampusBite | KPRCAS</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="campus-experience.css">
+<style>
+body.start-page{min-height:100vh;background:radial-gradient(ellipse at 10% 10%,#e9f6ec 0,transparent 45%),radial-gradient(ellipse at 95% 85%,#fff0d2 0,transparent 40%),#f7f9f8}
+.start-wrap{min-height:calc(100vh - 100px);display:grid;place-items:center;padding:36px 18px}
+.start-card{width:min(100%,860px);padding:clamp(24px,5vw,54px);border:1px solid #e6ebed;border-radius:28px;background:#ffffffed;box-shadow:0 25px 80px #09244012}
+.start-card-head{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.start-brand{display:flex;align-items:center;justify-content:center;gap:12px;color:#092440;font-size:26px;font-weight:900}
+.start-brand img{width:58px;height:58px;object-fit:contain}
+.start-admin-shortcut{display:inline-flex;align-items:center;gap:8px;padding:11px 15px;border:1px solid #f2bd5a;border-radius:12px;background:#fff7e8;color:#805000;font-size:13px;font-weight:850;text-decoration:none;white-space:nowrap}
+.start-admin-shortcut:hover{background:#ffefcf;border-color:#e6a521}
+.start-title{text-align:center;margin:30px auto 8px;font-size:clamp(30px,5vw,46px);letter-spacing:-1.3px}
+.start-intro{text-align:center;color:#667386;line-height:1.65;margin:0 auto;max-width:520px}
+.role-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:32px 0 0}
+.role-option{display:grid;gap:12px;align-content:start;padding:24px;border:1px solid #e4e9ec;border-radius:19px;background:white;text-decoration:none;color:#182536;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.role-option:hover{transform:translateY(-3px);border-color:#f2bd5a;box-shadow:0 14px 36px #09244012}
+.role-icon{display:grid;place-items:center;width:48px;height:48px;border-radius:15px;background:#fff2db;color:#a66700;font-size:24px;font-weight:900}
+.role-option h2{font-size:21px}
+.role-option p{margin:0;color:#667386;font-size:14px;line-height:1.6}
+.role-action{margin-top:5px;color:#a66700;font-weight:850}
+#startMessage{text-align:center}
+@media(max-width:580px){.role-options{grid-template-columns:1fr}.start-wrap{min-height:auto}.role-option{padding:20px}.start-card-head{align-items:flex-start;flex-direction:column}.start-admin-shortcut{align-self:flex-end}}
+</style>
+</head>
+<body class="start-page">
+<main class="start-wrap">
+  <section class="start-card" aria-labelledby="startTitle">
+    <div class="start-card-head">
+      <a class="start-brand" href="index.html"><img src="campusbite-logo.png" alt=""><span>Campus<span class="orange">Bite</span></span></a>
+      <a class="start-admin-shortcut" href="admin.html"><span aria-hidden="true">▦</span> Admin login</a>
+    </div>
+    <h1 class="start-title" id="startTitle">Welcome to CampusBite</h1>
+    <p class="start-intro">Choose your sign-in to continue to the KPRCAS campus food experience.</p>
+    <form id="startSearchForm" class="start-search-form" role="search">
+      <input name="search" type="search" placeholder="Search campus food…" aria-label="Search campus food">
+      <button class="primary" type="submit">Search menu</button>
+    </form>
+    <p class="background-hint">Swipe left or right to change the background.</p>
+    <div class="role-options">
+      <a class="role-option" href="student-login.html">
+        <span class="role-icon" aria-hidden="true">🎓</span>
+        <h2>Student login</h2>
+        <p>Sign in to view your campus orders, rewards, and student portal.</p>
+        <span class="role-action">Continue as student →</span>
+      </a>
+      <a class="role-option" href="admin.html">
+        <span class="role-icon" aria-hidden="true">▦</span>
+        <h2>Admin login</h2>
+        <p>Sign in to manage orders, food menus, stalls, and campus updates.</p>
+        <span class="role-action">Continue as admin →</span>
+      </a>
+    </div>
+    <p id="startMessage" class="error" role="status"></p>
+  </section>
+</main>
+<footer><img src="campusbite-logo.png" alt=""><span>CampusBite · KPRCAS campus food</span><small>Local demo app · do not enter real passwords or payment information.</small></footer>
+<script src="campus-experience.js"></script>
+</body>
+</html>

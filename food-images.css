@@ -1,0 +1,29 @@
+.food-art {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 30% 25%, #fffaf1, #f2dfbd);
+}
+
+.food-fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+.food-art img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.food-card:hover .food-art img {
+  transform: scale(1.04);
+}
+
+.table-food img {
+  display: block;
+}
